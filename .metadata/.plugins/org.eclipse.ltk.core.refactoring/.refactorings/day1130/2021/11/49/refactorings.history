@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;day1130/src/main/webapp/상품그림&apos; to &apos;images&apos;" description="Rename resource &apos;상품그림&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/상품그림" name="images" stamp="1638234499775" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;day1130/src/main/webapp/dateTEst.html&apos; to &apos;dateTest.html&apos;" description="Rename resource &apos;dateTEst.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/dateTEst.html" name="dateTest.html" stamp="1638252308390" updateReferences="true"/>
+</session>

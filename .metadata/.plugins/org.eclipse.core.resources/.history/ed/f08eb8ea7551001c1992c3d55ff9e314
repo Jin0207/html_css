@@ -1,0 +1,23 @@
+package com.sist.dao;
+
+import java.util.ArrayList;
+
+public class DeptDAO {
+	
+	public ArrayList<String> listDname(){
+		ArrayList<String> list = new ArrayList<String>();
+		String sql = "select dname from dept";
+		String driver = "oracle.jdbc.driver.OracleDriver";
+		String url = "jdbc:oracle:thin:@localhost:1521:XE";
+		String user = "";
+		String pwd= "";
+		try {
+			
+		} catch (Exception e) {
+			System.out.println("예외발생:" + e.getMessage());
+		}finally {
+			
+		}
+		return list;
+	}
+}

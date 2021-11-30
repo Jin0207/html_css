@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="boardOK.jsp" method="post">
+		게시물번호: <input type="number" value="1" name="no">
+		작성자명: <input required="required"  type="text"  name="name">
+		작성자이메일: <input type="email" placeholder="abc@naver.com" name="email">
+		글 제목: <input type="text" name="title">
+		글 암호: <input type="password" name="pwd">
+		글 내용: <input type="">
+		카테고리: <input type="number" value="1">
+	
+	</form>
+</body>
+</html>

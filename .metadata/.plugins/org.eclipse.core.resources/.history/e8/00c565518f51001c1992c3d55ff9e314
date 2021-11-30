@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="inputTestOK04" method="post">
+		<h2>혈액형을 선택해주세요</h2>
+		<hr>
+		<input type="radio" name="blood" value="A">A
+		<input type="radio" name="blood" value="B">B
+		<input type="radio" name="blood" value="O">O
+		<input type="radio" name="blood" value="AB">AB
+		<input type="submit" value="선택">
+	</form>
+</body>
+</html>

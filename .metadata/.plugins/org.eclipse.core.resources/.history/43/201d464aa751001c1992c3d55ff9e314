@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="enhancedTag.jsp" method="post">
+		검색: <input type="search" name="keyword"> <br>
+		전화: <input type="tel" name="tel" required="required"> <br>
+		url: <input type="url" name="url"> <br>
+		email: <input type="email" name="email" required="required"> <br>
+		나이: <input type="number" name="age" min="1" max="100"required="required"> <br>
+	</form>
+</body>
+</html>

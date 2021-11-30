@@ -1,0 +1,31 @@
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	//String[] data = {"개발1팀","개발2팀","기획팀","영업팀"};
+	ArrayList<String> data = new ArrayList<String>();
+	data.add("개발1팀");
+	data.add("개발2팀");
+	data.add("기획팀");
+	data.add("영업팀");
+%>
+	<h2>부서 목록</h2>
+	<hr>
+	<ul>
+		<%
+			for(int i = 0; i < data.length; i++){
+				%>
+					<li><%= data[i] %></li>
+				<%
+			}
+		%>
+	</ul>
+</body>
+</html>

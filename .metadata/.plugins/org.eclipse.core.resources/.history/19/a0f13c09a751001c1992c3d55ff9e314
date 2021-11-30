@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="enhancedTag.jsp" method="post">
+		검색: <input type="search" name="keyword"> <br>
+		검색: <input type="search" name="keyword"> <br>
+	</form>
+</body>
+</html>

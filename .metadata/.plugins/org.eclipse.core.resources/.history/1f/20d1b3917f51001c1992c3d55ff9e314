@@ -1,0 +1,14 @@
+package com.sist.dao;
+
+import java.util.ArrayList;
+
+import com.sist.vo.GoodsVO;
+
+public class GoodsDAO {
+	
+	public ArrayList<GoodsVO> goodsList(){
+		ArrayList<GoodsVO> list = new ArrayList<GoodsVO>();
+		
+		return list;
+	}
+}
