@@ -1,0 +1,11 @@
+@charset "EUC-KR";
+	p{
+		color: blue;
+	}
+	#title{
+		background: black;
+		color: red;
+	}
+	.name{
+		color: pink;
+	}

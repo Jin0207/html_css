@@ -29,7 +29,7 @@ public class DeptDAO {
 				list.add(rs.getString(1));
 			}
 		} catch (Exception e) {
-			System.out.println("¿¹¿Ü¹ß»ý:" + e.getMessage());
+			System.out.println("ï¿½ï¿½ï¿½Ü¹ß»ï¿½:" + e.getMessage());
 		}finally {
 			try {
 				if(rs != null) rs.close();
