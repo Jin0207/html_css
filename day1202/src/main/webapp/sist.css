@@ -1,0 +1,90 @@
+@charset "EUC-KR";
+
+header{
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;	
+	background: #069;
+	padding: 10px;	
+	overflow: hidden;
+}
+
+header h1{
+	width: 40%;
+	float: left;
+	color: #fff;
+}
+
+header nav{
+	float: right;
+	width: 60%;
+}
+
+nav ul{
+	list-style: none;	
+}
+
+nav ul li{
+	display: inline;
+	float: left;
+	margin: 15px;
+}
+
+nav ul li a{
+	color: white;
+	text-decoration: none;
+}
+
+nav ul li a:hover{
+	color: black;
+	font-weight: bolder;
+}
+
+p {
+	font-size: 15px;
+	line-height: 20px;
+}
+
+dt{
+	font-weight: bold;
+	color: purple;
+}
+
+h1{
+	font-size: 2em;
+}
+
+section{
+	width: 80%;
+	margin: 5px auto;
+	border: 5px solid #333;
+	padding: 5px;
+	overflow: hidden;
+}
+
+article h3 {
+	background: no-repeat left center url("images/dog.png");
+	padding-left: 20px;
+}
+
+footer{
+	clear: both;
+	margint: 0 auto;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
