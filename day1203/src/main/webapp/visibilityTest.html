@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+	img:nth-child(2) {
+		visibility: hidden;
+	}
+	
+	.test span:nth-child(2) {
+		visibility:  collapse;
+	}
+	
+</style>
+</head>
+<body>
+	<div>
+		<img height="50" width="50" src="images/ball1.jpg">
+		<img height="50" width="50" src="images/ball2.jpg">
+		<img height="50" width="50" src="images/ball3.jpg">
+	</div>
+	<div class="test">
+		<span>1</span>
+		<span>2</span>
+		<span>3</span>
+		<span>4</span>
+	</div>
+	<div class="test2">
+		<table border="1">
+			<tr>
+				<th>1</th>
+				<th>2</th>
+				<th>3</th>
+			</tr>
+			<tr>
+				<th style="visibility: collapse;">A</th>
+				<th>B</th>
+				<th>C</th>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
