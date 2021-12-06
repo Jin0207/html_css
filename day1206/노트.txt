@@ -1,0 +1,202 @@
+**css 선택자
+	[속성^=값]선택자
+		특정 값으로 시작하는 속성을 가진 요소를 찾아 스타일 적용
+		
+	[속성 $= 값] 선택자
+		특정 값으로 끝나는 속성을 가진 요소를 찾아 스타일 적용
+	
+	[속성*=값]선택자
+	값의 일부가 일치하는 속성을 가진 요소를 찾아 스타일 적용
+
+**사용자 동작에 반응하는 가상 클래스
+	:link
+		방문하지 않은 링크에 스타일 적용
+	:visited
+		방문한 링크에 스타일 적용
+	:active
+		웹 요소를 활성화했을 때의 스타일 적용
+	:hover
+		웹 요소에 마우스 커서를 올려놓을 때의 스타일 적용
+		
+	:focus
+		웹 요소에 초점이 맞추어졌을 때의 스타일 적용
+
+**UI요소 상태에 따른 가상 클래스
+
+:enabled
+:disabled
+	요소를 사용할 수 있을 때와 없을 때의 스타일 지정
+
+:checked
+	라디오 박스나 체크박스에서 항목을 선택했을 때의 스타일 지정
+	
+**구조 가상 클래스
+
+:root
+	문서 안의 루트요소에 스타일 적용
+	웹 문서의 최상위 요소는 <html>이므로 
+
+:nth-child(n)
+	앞에서부터 n번째 자식요소에 스타일 적용
+:nth-last-child(n)
+	뒤에서부터 n번째 자식 요소에 스타일 적용
+	
+위치를 나타낼 때, an+b 처럼 수식을 사용할 수 도 있음
+이때 n값은 0부터
+
+odd 홀수번째
+
+even 짝수번째
+
+:nth-of-type(n)
+	앞에서부터 n번째 요소에 스타일 적용
+:nth-last-of-type(n)
+	뒤에서부터 n번째 요소에 스타일 적용
+
+:first-child
+	첫번째 자식 요소스타일 적용
+:last-child
+	마지막 자식 요소에 스타일 적용
+	
+**CSS와 애니메이션
+	변형 = transform
+		특정요소의 크기나 형태 등 스타일이 바뀌는 것
+		
+		2차원 변형
+			수평이나 수직으로 웹 요소 변형
+			크기나 각도만 지정하면 됨
+			2차원 좌표 사용
+		3차원 변형
+			x축과 y축에 원근감 추가
+			
+	transform과 변형 함수
+		translate	지정한 크기만큼 이동
+		scale		지정한 크기만큼 확대/축소
+		rotate		지정한 각도만큼 회전
+		skew		지정한 각도만큼 왜곡
+	
+	2차원변형함수
+		translate(tx,ty)
+		translate(tx)
+		translate(ty)
+		scale(sx,sy)
+		scaleX(sx)
+		scaleY(sy)
+		rotate(각도)
+		skew(ax,ay)
+		skewX(ax)
+		skewY(ay)
+		
+	3차원변형함수
+		matrix3d(n[,n])
+			4*4행렬을 이용해 이동과 확대/축소, 회전 등의 변환 지정
+		translate3d(tx,ty,tz)
+		translateZ(tz)
+		scale3d(sx,sy,sz)
+		scaleZ(sz)
+		rotate3d(rx,ry,rz,각도)
+		rotateX
+		rotateY
+		rotateZ
+		perspective
+			입체적으로 보일 수 있는 깊이 값 지정
+	
+	
+	transform-origin
+		특정 지점을 변형의 기준으로 설정
+		
+		transform-origin: <x축> <y축>, <z축>
+			x축: 원점 기준의 x좌표값으로 길이 값이나, 백분율, left, center,right중에서 사용
+			y축: 원점 기준의 y좌표값으로 길이값, 백분율, top, center, bottom
+			z축: 원점 기준의 z표값으로 길이값만 사용가능
+	
+	perspective 속성
+		3차원을 위해서는 원근감을 설정해야한다
+		속성 값은 0보다 커야하며 값이 클수록 사용자로부터 멀어짐
+		<크기>
+		none (기본값)
+		
+	perspective-origin
+	
+	transform-style
+		flat				하위 요소를 평면으로 처리
+		preserve-3d			하위 요소들에 3D효과를 적용
+	
+	backface-visibility
+		요소의 뒷면, 즉 반대쪽 면을 표시할 것인지 결정
+		
+		visible 뒷면 표시 (기본값)
+		hidden 뒷면 표시 x
+		
+	두 개 이상의 변형 동시에 사용하려면 transform 속성에 변형 함수 나열
+	
+	크기를 2배 확대하면서 x축 기준으로 189도회전.
+	transform: scale(2) perspective(120px) rotateX(180deg);
+	
+	**트랜지션
+		웹 요소의 스타일 속성이 시간을 두고 자연스럽게 바뀌는 것
+		
+		transition-property
+			트랜지션 대상 설정
+			all(기본값)
+				요소의 모든 속성이 트랜지션 대상
+			none
+				트랜지션 동안 아무 속성도 바뀌지 않음
+			<속성 이름>
+		
+		transition-duration
+			트랜지션 진행 시간 설정
+			시간단위는 초 또는 밀리초
+			트랜지션이 여러개라면 쉼표로 구분해 진행시간 지정
+			
+		transition-timing-function
+			트랜지션 속도 곡선 설정
+			linear
+				처음부터 끝까지 일정한 속도로 트랜지션 진행
+			ease (기본값)
+				처음에는 천천히 시작하고 점점 빨라지다가 마지막에 천천히 끝남
+			ease-in
+				시작을 느리게
+			ease-out
+				느리게 끝냄
+			ease-in-out
+				느리게 시작, 느리게 끝
+			cubic-bezier(n,n,n,n)
+				n에서 사용할 수 있는 값은 0~1
+				
+		transition-delay
+			트랜지션 지연 시간 설정
+			초 또는 밀리초, 기본값은 0
+			
+		transition
+			한꺼번에 속성을 설정
+		
+	**keyframes 속성
+		애니메이션의 시작과 끝을 비롯해 상태가 바뀌는 지점을 설정
+		'이름'으로 애니메이션 구별
+		
+		@keyframes <이름>{
+			<선택자> { <스타일>}
+		}
+		
+		시작위치는 0%, 끝 위치 100%
+		시작과 끝 위치만 사용한다면 from, to 키워드 사용
+			
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+	.origin{
+		width: 200px;
+		height: 134px;
+		border: 1px solid black;
+		margin: 56px;
+		display: inline-block;
+		perspective: 200px;
+	}
+	.origin span{
+		background: #eee;
+	}
+	.rotateX:hover{
+		transform: rotateX(45deg);
+	}
+	.rotateY:hover{
+		transform: rotateY(45deg);
+	}
+	.rotateZ:hover{
+		transform: rotateZ(45deg);
+	}
+	.rotate3D:hover{
+		transform: rotate3d(2.5,1.2,-1.5,45deg);
+	}
+	.skewX:hover{
+		transform: skewX(30deg);
+	}
+	.skewY:hover{
+		transform: skewY(15deg);
+	}
+	.skewXY:hover{
+		transform: skew(-25deg,-15deg);
+	}
+</style>
+</head>
+<body>
+	<div class="origin">
+		<div class="rotateX">
+			<span>rotate-right</span>
+			<img src="images/coffee.jpg" width="200">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="rotateY">
+			<span>rotate-left</span>
+			<img src="images/coffee.jpg" width="200">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="rotateZ">
+			<span>rotate-right</span>
+			<img src="images/coffee.jpg" width="200">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="rotate3D">
+			<span>rotate-left</span>
+			<img src="images/coffee.jpg" width="200">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="skewX">
+			<span>skewX</span>
+			<img src="images/lamp.jpg" width="200">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="skewY">
+			<span>skewY</span>
+			<img src="images/lamp.jpg" width="200">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="skewXY">
+			<span>skewXY</span>
+			<img src="images/lamp.jpg" width="200">
+		</div>
+	</div>
+</body>
+</html>

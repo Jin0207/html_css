@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+	.origin{
+		width: 200px;
+		height: 134px;
+		border: 1px solid black;
+		margin: 40px;
+		display: inline-block;
+	}
+	.origin span{
+		background: #eee;
+	}
+	.moveX:hover {
+		transform: translateX(50px);
+	}
+	.moveY:hover {
+		transform: translateY(50px);
+	}
+	.moveXY:hover {
+		transform: translate(50px, 50px);
+	}
+	
+	.scaleX:hover{
+		transform:scaleX(1.5);
+	}
+	.scaleY:hover{
+		transform: scaleY(1.5);
+	}
+	.scaleXY:hover{
+		transform: scale(0.7);
+	}
+	
+	.rotate1:hover{
+		transform: rotate(20deg);
+	}
+	.rotate2:hover{
+		transform: rotate(-20deg);
+	}
+</style>
+</head>
+<body>
+	<div class="origin">
+		<div class="moveX">
+			<span>moveX</span>
+			<img src="images/bus.jpg">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="moveY">
+			<span>moveY</span>
+			<img src="images/bus.jpg">
+		</div>
+	</div>
+	
+	<div class="origin">
+		<div class="moveXY">
+			<span>moveX</span>
+			<img src="images/bus.jpg">
+		</div>
+	</div>
+	
+	<div class="origin">
+		<div class="scaleX">
+			<span>scaleX</span>
+			<img src="images/fruit.jpg" width="200">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="scaleY">
+			<span>scaleY</span>
+			<img src="images/fruit.jpg" width="200">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="scaleXY">
+			<span>scaleXY</span>
+			<img src="images/fruit.jpg" width="200">
+		</div>
+	</div>
+	
+	<div class="origin">
+		<div class="rotate1">
+			<span>rotate-right</span>
+			<img src="images/coffee.jpg" width="200">
+		</div>
+	</div>
+	<div class="origin">
+		<div class="rotate2">
+			<span>rotate-left</span>
+			<img src="images/coffee.jpg" width="200">
+		</div>
+	</div>
+</body>
+</html>

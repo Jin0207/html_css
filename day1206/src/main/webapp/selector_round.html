@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+	.navi li{
+		list-style: none;
+		width: 8em;
+		height: 3em;
+		float: left;
+		text-align: center;
+		line-height: 3em;
+		border: 1px solid black;
+		box-shadow: 1px 1px 1px #bbb;	
+	}
+	.navi li a{
+		padding: .8em .5em .5em;
+		text-decoration: none;
+		color: #292929;
+		text-shadow: 1px 1px 0px #ccc;
+	}
+	.navi li:hover > a{
+		background: #333;
+		color: white;
+		text-shadow: 1px 1px 0px #000;
+	}
+	.navi li:first-child {
+		border-top-left-radius: 1em;
+		border-bottom-left-radius: 1em;
+	}
+	.navi li:last-child {
+		border-top-right-radius: 1em;
+		border-bottom-right-radius: 1em;
+	}
+</style>
+</head>
+<body>
+	<ul class="navi">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">HTML5</a></li>
+		<li><a href="#">CSS3</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+</body>
+</html>
