@@ -4,32 +4,44 @@
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <style type="text/css">
+
 	.box{
-		margin: 50px 100px;
-		padding: 20px;
+		width: 60px;
 		height: 60px;
-		animation: moving 3s infinite;	
+		margin: 60px;
+		animation: rotate 1.5s infinite, background 1.5s infinite alternate;
+		background: blue;
 	}
-	
-	@keyframes moving{
+
+	@keyframes rotate{
 		from{
-			width: 200px;
-			background: #faef7c;
-			opacity: 0.5;
-			transform: scale(0.5) rotate(15deg);
+			transform:perspective(120px) rotateX(0deg) rotateY(0deg);
+		}
+		50%{
+			transform:perspective(120px) rotateX(-180deg) rotateY(0deg);
 		}
 		to{
-			width: 400px;
-			background: #ff9400;
-			opacity: 1;
-			transform: scale(1)	rotate(0deg);	
+			transform:perspective(120px) rotateX(-180deg) rotateY(-180deg);
 		}
 	}
+	
+	@keyframes background{
+		from{
+			background:red;
+		}
+		50%{
+			background:green;
+		}
+		to{
+			background:blue;
+		}
+	}
+
 </style>
+
+
 </head>
 <body>
-	<div class="box">
-		<h3>Hello CSS</h3>
-	</div>
+	<div class="box"></div>
 </body>
 </html>

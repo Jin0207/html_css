@@ -4,24 +4,25 @@
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <style type="text/css">
+/*
+	1) 박스의 가로,세로 크기를 100으로 설정하고 
+			배경색은 초록으로 하고 검정색 실선의 둥근 테두리로 설정합니다.
+	2) 박스위에 마우스가 올라가면 점점더 박스의 색상이 
+			노란색이 되도록 변형해 봅니다.
+	완성하면 "1"
+*/
+
 	.box{
 		width: 100px;
 		height: 100px;
 		background: green;
-		border: 1px solid black;
-		border-radius: 50%;
+		border: solid 1px black;
+		border-radius: 10px;
+		transition: 1s;
 	}
+	
 	.box:hover{
-		animation: chColor 3s infinite alternate ease-in-out;
-	}
-	@keyframes chColor{
-		from{
-			background: green;
-		}
-		to{
-			background: yellow;
-		}
-
+		background: yellow;
 	}
 </style>
 </head>
@@ -29,3 +30,11 @@
 	<div class="box"></div>
 </body>
 </html>
+
+
+
+
+
+
+
+
