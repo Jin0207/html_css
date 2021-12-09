@@ -6,13 +6,22 @@
 <style>
     #container{
         width: 500px;
+        margin: 0 auto;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+    }
+    #container2{
+        width: 500px;
         height: 300px;
         margin: 0 auto;
         border: 2px solid black;
         display: flex;
-        flex-direction: column-reverse;
     }
-    #container div{
+    p{
+    	width:100%;
+    }
+    div > div{
         width: 200px;
         border: 1px solid black;
         background-color: #ccc;
@@ -26,6 +35,13 @@
 </head>
 <body>
     <div id="container">
+		<p>display: flex | flex-direction: column </p>
+        <div id="box1"><h2>1</h2></div>
+        <div id="box2"><h2>2</h2></div>
+        <div id="box3"><h2>3</h2></div>
+    </div>
+    <div id="container2">
+    	<p>display: flex | flex-direction: row </p>
         <div id="box1"><h2>1</h2></div>
         <div id="box2"><h2>2</h2></div>
         <div id="box3"><h2>3</h2></div>

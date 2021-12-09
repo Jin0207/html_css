@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//보통은 자바스크립트 코드를 head에 작성한다
+	//이때 html태그가 모두 만들어지고 난 다음에 동작하도록하기위하여
+	//window.onload
+	window.onload = function(){
+		alert("ok!");
+		var r = document.getElementById("map").innerHTML;
+		alert(r);
+	}
+</script>
+</head>
+<body>
+	<div id="map">hello</div>
+	<!-- 
+	<script type="text/javascript">
+		var r = document.getElementById("map").innerHTML;
+		alert(r);
+	</script>
+	 -->
+</body>
+</html>

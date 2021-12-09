@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+	span{
+		display: inline-block;
+		margin: 5px;
+		cursor: pointer;
+	}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var pageSize = 20; //한 화면에 20개씩 보여주기위한 변수
+		var totalRecord; //전체 레코드 수를 담기위한 변수
+		var totalPage;	//전체 페이지수를 담기위한 변수
+		var arr;		//전체 데이터를 담기위한 배열
+		var pageGroup = 10; //한 화면에 보여지는 페이지수
+		
+		$.getJSON("전국야영(캠핑)장표준데이터.json", function(data){
+			arr = data['records'];
+			totalRecord = arr.length;
+			totalPage = Math.ceil(totalRecord / pageSize);
+			
+			printPageNumber(1);
+			printPage(1);
+		});//end getJSON
+		
+		//현재 페이지 의 캠핑장 목록 출력하기
+		function printPage(page){
+			
+			$("#list").empty();
+			
+			//page가 1일경우, 보여주어야할 시작레코드의 인덱스: 0 마지막 인덱스: 9
+			var start = (page-1)*pageSize;
+			var end = start + pageSize -1;
+			
+			//캠핑장 목록 출력
+			for(var i=start; i < end; i++){
+				var row = arr[i];
+				var name = row['야영(캠핑)장명'];
+				var addr = row['소재지도로명주소'];
+				var lat = row['위도'];
+				var lng = row['경도'];
+				
+				var td1 = $("<td></td>").html(name);
+				var td2 = $("<td></td>").html(addr);
+				var td3 = $("<td></td>").html(lat);
+				var td4 = $("<td></td>").html(lng);
+				var tr = $("<tr></tr>");
+				$(tr).append(td1,td2,td3,td4);
+				$("#list").append(tr);
+			}//end for
+		}//end printPage
+		
+		//함수정의
+		function printPageNumber(page){
+			//paging의 모든 자식 노드들을 지움
+			$("#paging").empty();
+			
+			var startPage = Math.floor((page - 1)/pageGroup) * pageGroup + 1;
+			var endPage = startPage + pageGroup -1;
+			
+			//마지막페이지는 전체페이지를 넘지않도록
+			if(endPage > totalPage){
+				endPage = totalPage;
+			}
+			
+			if(startPage > 1){
+				var span = $("<span></span>").html("[이전]");
+				$(span).attr("page", startPage-1);
+				$("#paging").append(span);
+			}
+			
+			//페이지번호 출력
+			for(var i = startPage; i <= endPage; i++){
+				var span = $("<span></span>").html(i);
+				$(span).attr("page",i);
+				$("#paging").append(span);
+			}
+			
+			if(endPage < totalPage){
+				var span = $("<span></span>").html("[다음]");
+				$(span).attr("page",endPage + 1);
+				$("#paging").append(span);
+			}
+		}
+		
+		//페이지 번호를 담고 있는 span태그가 눌러졌을때의 처리
+		$(document).on("click", "span", function(){
+			var page = $(this).attr("page");
+			printPageNumber(page);
+			printPage(page);
+		});
+		
+	});//end function
+	
+</script>
+</head>
+<body>
+	<div id="paging"></div>
+	<table>
+		<thead>
+			<tr>
+				<th>캠핑장이름</th>
+				<th>주소</th>
+				<th>위도</th>
+				<th>경도</th>
+			</tr>
+		</thead>
+		<tbody id="list">
+		</tbody>
+	</table>
+</body>
+</html>

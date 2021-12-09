@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<!-- 카카오 라이브러리 사용 -->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=89d94c192a46a1e89ffcab7217dd4a2f"></script>
+<!-- 제이쿼리 라이브러리 사용 -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$.getJSON("전국야영(캠핑)장표준데이터.json", function(data) {
+			var arr = data['records'];
+			/*
+				{야영(캠핑)장명: '오션파크', 야영(캠핑)장구분: '야영장', 위도: '36.6744920527', 경도: '126.2808663915', 소재지도로명주소: '충청남도 태안군 남면 몽산포길 161', …}
+				1일최대수용인원수: "104"
+				건축연면적: ""
+				경도: "126.2808663915"
+				관리기관명: "태안군청"
+				관리기관전화번호: "041-670-2766"
+				기타부대시설: ""
+				데이터기준일자: "2020-01-28"
+				부지면적: "4899"
+				소재지도로명주소: "충청남도 태안군 남면 몽산포길 161"
+				소재지지번주소: "충청남도 태안군 남면 몽산리 782-13"
+				안전시설: "소화기+대피공간"
+				야영(캠핑)장구분: "야영장"
+				야영(캠핑)장명: "오션파크"
+				야영사이트수: "2"
+				야영장전화번호: "041-672-3043"
+				위도: "36.6744920527"
+				이용시간: ""
+				이용요금: ""
+				제공기관명: "충청남도"
+				제공기관코드: "6440000"
+				주차장면수: ""
+				편의시설: "전기시설+하수도시설"
+			*/
+			$.each(arr, function(index, row){
+				var name = row['야영(캠핑)장명'];
+				var addr = row['소재지도로명주소'];
+				var lat = row['위도'];
+				var lng = row['경도'];
+			});
+		});//end getJSON
+		
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+	    mapOption = { 
+	        center: new kakao.maps.LatLng(36.6744920527,126.2808663915), // 지도의 중심좌표
+	        level: 3 // 지도의 확대 레벨
+	    };
+	
+		// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+		var map = new kakao.maps.Map(mapContainer, mapOption); 
+	});//end function
+</script>
+</head>
+<body>
+	<div id="map" style="width: 100%; height: 500px;"></div>
+</body>
+</html>
